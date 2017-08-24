@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>with关键字测试</title>
+</head>
+<body>
+    <div id="display">
+        
+    </div>
+    <script type="text/javascript">
+        function func() {
+            console.time("func");
+            var obj = {
+                a: [1, 2, 3]
+            };
+            for (var i = 0; i < 100000; i++) {
+                var v = obj.a[0];
+            }
+            console.timeEnd("func");
+        }
+        func();
+        function funcWith() {
+            console.time("funcWith");
+            var obj = {
+                a: [1, 2, 3]
+            };
+            with(obj) {
+                for (var i = 0; i < 100000; i++) {
+                    var v = a[0];
+                }
+            }
+            console.timeEnd("funcWith");
+        }
+        funcWith();
+    </script>
+</body>
+</html>
