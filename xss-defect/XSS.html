@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xss 过滤</title>
+</head>
+<body>
+    <script type="text/javascript" src="xss.min.js"></script>
+    <script>
+       console.log(filterXSS('<a href="#" onclick="alert(/xss/)">click me</a>')); 
+    </script>
+</body>
+</html>
