@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scrollIntoView</title>
+</head>
+<style type="text/css">
+    div {
+        margin: 10rem;
+        border: 1px solid grey;
+    }
+</style>
+<body>
+<div id="test1">test1</div>
+<div id="test2">test2</div>
+<div id="test3">test3</div>
+<div id="test4">test4</div>
+<div id="test5">test5</div>
+<div id="test6">test6</div>
+<div id="test7">test7</div>
+<div id="test8">test8</div>
+<script>
+   window.onload = function() {
+        setTimeout(function() {
+            document.getElementById("test7").scrollIntoView(true);
+            console.log(true);           
+        }, 1000);
+
+   } 
+</script>
+</body>
+</html>
