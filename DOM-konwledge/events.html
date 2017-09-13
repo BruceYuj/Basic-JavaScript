@@ -9,6 +9,15 @@
     <script type="text/javascript">
         var btn = document.getElementById("myBtn");
         console.log(btn.onclick);
+        document.body.addEventListener("resize", function(event) {
+            console.log("Resized body");
+        }, false);
+        document.addEventListener("resize", function(event) {
+            console.log("Resized document");
+        }, false);
+        window.addEventListener("resize", function(event) {
+            console.log("Resized window");
+        }, false);
     </script>
 </body>
 </html>
