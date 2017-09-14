@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>event-load</title>
+</head>
+<body>
+    <img id="image" src="example.png">    
+    <script type="text/javascript" src="xxx"></script>
+    <script>
+        document.getElementById("image").addEventListener("load", function(event) {
+            console.log(event.toString());
+            console.log("image finished loading");
+        });
+        document.getElementById("image").addEventListener("unload", function(event) {
+            console.log(event.toString());
+            console.log("image finished unload");
+        });
+        window.addEventListener("load", function(event) {
+            console.log("All resources finished loading!");
+        });
+        document.addEventListener("load", function(event) {
+            console.log("document successful!");
+        })
+    </script>
+</body>
+</html>
