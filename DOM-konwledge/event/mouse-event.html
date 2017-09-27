@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mouse event</title>
+
+  </head>
+  <body>
+    <div id="myDiv"> this is div</div>
+    <script>
+        var div = document.getElementById("myDiv");
+        div.addEventListener("click", function(event){
+            alert("client coordinates:" + event.clientX + "," + event.clientY);
+        })
+    </script>    
+  </body>
+</html>
